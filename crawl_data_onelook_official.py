@@ -1,6 +1,6 @@
 import requests
 import collections
-from routes import key_word
+from word import key_word
 
 ini_url = "https://api.onelook.com/words?v=ol_gte3&ml=%20{{ u }}&qe=ml&md=dp&max=1000&k=olthes_r4"
 url = ini_url.replace("{{ u }}", key_word)

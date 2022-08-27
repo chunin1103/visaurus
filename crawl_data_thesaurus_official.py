@@ -1,11 +1,10 @@
 from urllib.request import urlopen
-# from .routes import key_word
+from word import key_word
 # import os
 # os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r"E:\Projects\.new_chapter_for_thesaurus\Credentials\vi-thesaurus-c8077aebe0c3.json"
 
 ini_url = "https://www.thesaurus.com/browse/"
-# user_input = key_word.replace('-', '%20')
-# url = ini_url + user_input
+
 url = ini_url + "eat"
 from bs4 import BeautifulSoup
 
