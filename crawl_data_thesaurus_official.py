@@ -24,4 +24,4 @@ for __ in li_list:
     word_crawled = __.text.strip()
     symnonym_list.append(word_crawled)
 
-print(symnonym_list)
+print(symnonym_list)    
