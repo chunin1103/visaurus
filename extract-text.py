@@ -1,5 +1,5 @@
 import csv
-from google_translate import GGtrans
+from google_translate2 import GGtrans
 
 # open the file in the write mode
 f = open('all30k.csv', 'w', encoding="utf-8", newline='')
