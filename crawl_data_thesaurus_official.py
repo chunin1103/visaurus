@@ -28,7 +28,7 @@ def crawlThesaurus(word):
             word_crawled = __.text.strip()
             symnonym_list.append(word_crawled)
         return symnonym_list, word_crawled
-    except:
-        pass 
+    except TypeError as e:
+        print(e)
+        print("handled successfully") 
 
-crawlThesaurus('rebel')

@@ -21,9 +21,12 @@ for eng_word in eng_word_list:
     print(eng_word)
     eng_word = eng_word.replace("a ", "")
     eng_word = eng_word.replace("A ", "")
-    eng_word = eng_word.replace("the ", "")
-    eng_word = eng_word.replace("The ", "")
-    symnonym_word = crawlThesaurus(eng_word)
+    # eng_word = eng_word.replace("the ", "")
+    # eng_word = eng_word.replace("The ", "")
+    try:
+        symnonym_word = crawlThesaurus(eng_word)
+    except:
+        symnonym_word = ["cannot found"]
     eng_word = [eng_word]
     eng_word.append(symnonym_word[0])
     eng_sym_list.append(eng_word)
