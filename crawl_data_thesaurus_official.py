@@ -6,6 +6,10 @@ from bs4 import BeautifulSoup
 def crawlThesaurus(word):
     # Url crawl
     ini_url = "https://www.thesaurus.com/browse/"
+    word = word.replace(' ', "+")
+    word = word.replace('!', '')
+    word = word.replace('?', '')
+    word = word.strip()
     url = ini_url + word
     try:
         # bs4 connect 
@@ -31,4 +35,3 @@ def crawlThesaurus(word):
     except TypeError as e:
         print(e)
         print("handled successfully") 
-
