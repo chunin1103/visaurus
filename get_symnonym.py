@@ -21,8 +21,8 @@ for eng_word in eng_word_list:
     print(eng_word)
     eng_word = eng_word.replace("a ", "")
     eng_word = eng_word.replace("A ", "")
-    # eng_word = eng_word.replace("the ", "")
-    # eng_word = eng_word.replace("The ", "")
+    eng_word = eng_word.replace("the ", "")
+    eng_word = eng_word.replace("The ", "")
     try:
         symnonym_word = crawlThesaurus(eng_word)
     except:
