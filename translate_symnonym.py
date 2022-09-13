@@ -9,19 +9,19 @@ f = open('symnonyms_vi.csv', 'w', encoding="utf-8", newline='')
 writer = csv.writer(f)
 
 sym_list =[]
-n = 0
 with open('Symnonym_List.csv', encoding='utf8') as csvfile:
     reader = csv.DictReader(csvfile)
     # structure: [{"Word": "abcd", "Symnonym": ["abc", "def"]}]
     for i in reader:
-        n+=1
-        if n<20:
-            tu_dn = i["Symnonyms"]
-            tu_dn = [tu_dn]
-            for i in tu_dn:
+        tu_dn = i["Symnonyms"]
+        tu_dn = [tu_dn]
+        for i in tu_dn:
+            try: 
                 vie_sym = GGtrans(i)
-                vie_sym = [vie_sym]
-                sym_list.append(vie_sym)
+            except:
+                vie_sym = "can't translate"
+            vie_sym = [vie_sym]
+            sym_list.append(vie_sym)
 
 for i in sym_list:
     writer.writerow(i)
