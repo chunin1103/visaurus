@@ -18,6 +18,7 @@ with open('all30k-Vitoen.csv', encoding='utf_8') as csvfile:
 eng_sym_list =[]
 
 for eng_word in eng_word_list:
+
     print(eng_word)
     eng_word = eng_word.replace("a ", "")
     eng_word = eng_word.replace("A ", "")
@@ -30,9 +31,6 @@ for eng_word in eng_word_list:
     eng_word = [eng_word]
     eng_word.append(symnonym_word)
     eng_sym_list.append(eng_word)
-    print(eng_sym_list)
-
-for i in eng_sym_list:
-    writer.writerow(i)
+    writer.writerow(eng_word)
 
 f.close()
