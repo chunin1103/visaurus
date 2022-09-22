@@ -1,5 +1,7 @@
-from urllib.request import urlopen
 from bs4 import BeautifulSoup
+from urllib.error import HTTPError, URLError
+import urllib.request
+
 
 def get_glosbe(word):
     ini_url = "https://vi.glosbe.com/en/vi/"
@@ -8,17 +10,19 @@ def get_glosbe(word):
     word = word.replace('?', '')
     word = word.strip()
     url     = ini_url + word
+    hdr = { 'User-Agent' : 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36' }
 
-    conn = urlopen(url)
-    raw_data = conn.read()
+    req = urllib.request.Request(url, headers=hdr)
+    response = urllib.request.urlopen(req)
+    raw_data = response.read()
+
     webpage_text = raw_data.decode("utf-8")
     soup = BeautifulSoup(webpage_text, "html.parser")
-
     div1        = soup.find("div",{'class': 'phrase__translation__section'})
     div2        = div1.find_next("ul",{'class': 'translations__list'})
     all_li      = div2.find_all("li", {'class': 'translation__item'})
     sym_list = []
-
+    
     for li in all_li:
         all_span    = li.find_all('span', {'class': 'translation__item__phrase'})
         for span in all_span:
@@ -36,7 +40,5 @@ def get_glosbe(word):
                 sym_list.append(span)
     except:
         pass
+    print(sym_list)
     return sym_list
-
-
-get_glosbe('easy')
