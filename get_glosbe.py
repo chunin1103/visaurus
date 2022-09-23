@@ -20,7 +20,7 @@ n=0
 m=0
 for eng_word in eng_word_list:
     n+=1
-    if 6768<n<10000:
+    if 14999<n<20000:
         print(eng_word)
         eng_word = eng_word.replace("a ", "")
         eng_word = eng_word.replace("A ", "")
