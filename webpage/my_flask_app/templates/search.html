@@ -1,4 +1,59 @@
-<form action="{{ url_for('search') }}" method="post">
-    <input type="text" name="word" placeholder="Enter a word">
-    <input type="submit" value="Search">
-</form>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+    <title>Word Synonyms Search</title>
+    <style>
+      /* Add your CSS styles here */
+      /* Example styles */
+      form {
+        width: 500px;
+        margin: 20px auto;
+        text-align: center;
+      }
+      input[type="text"] {
+        width: 70%;
+        padding: 10px;
+        font-size: 20px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      input[type="submit"] {
+        width: 20%;
+        padding: 10px;
+        font-size: 20px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+      }
+      h3 {
+        margin-bottom: 20px;
+      }
+      p {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Search form -->
+    <form action="/search" method="post">
+      <h3>Word Synonyms Search</h3>
+      <input type="text" name="word" placeholder="Enter a word">
+      <input type="submit" value="Search">
+    </form>
+    <!-- Display search results -->
+    {% if word and synonyms %}
+      <p>Results for: "{{ word }}"</p>
+      <p>Synonyms: {{ synonyms }}</p>
+    {% endif %}
+    
+  </body>
+</html>

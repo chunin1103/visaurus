@@ -35,8 +35,8 @@ def search():
     if request.method == "POST":
         word = request.form["word"]
         synonyms = get_synonyms(word)
-        return render_template("search2.html", word=word, synonyms=synonyms)
-    return render_template("search2.html")
+        return render_template("search.html", word=word, synonyms=synonyms)
+    return render_template("search.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
