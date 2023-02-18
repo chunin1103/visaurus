@@ -1,0 +1,6 @@
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [18/Feb/2023 10:17:44] "[37mPOST /search HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Feb/2023 10:17:48] "[37mPOST /search HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Feb/2023 10:18:09] "[37mPOST /search HTTP/1.1[0m" 200 -

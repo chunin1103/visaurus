@@ -10,6 +10,11 @@
     <style>
       /* Add your CSS styles here */
       /* Example styles */
+      body {
+        text-align: center;
+        align-items: center;
+        height: 100vh;
+      }
       form {
         width: 500px;
         margin: 20px auto;
@@ -40,6 +45,10 @@
       p {
         margin-bottom: 20px;
       }
+      
+      table {
+        align-items: center;
+      }
     </style>
   </head>
   <body>
@@ -51,9 +60,18 @@
     </form>
     <!-- Display search results -->
     {% if word and synonyms %}
-      <p>Results for: "{{ word }}"</p>
-      <p>Synonyms: {{ synonyms }}</p>
+      <p>Synnonyms for: "{{ word }}"</p>
+      <table class="table table-bordered">
+        <tr>
+          {% set synonyms_list = synonyms.split(',') %}
+          {% for synonym in synonyms_list %}
+            {% if loop.index is divisibleby 4 %}
+              </tr><tr>
+            {% endif %}
+            <td>{{ synonym }}</td>
+          {% endfor %}
+        </tr>
+      </table>
     {% endif %}
-    
   </body>
 </html>
