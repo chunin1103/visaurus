@@ -1,12 +1,17 @@
 import psycopg2
 import logging
+import os
+from dotenv import load_dotenv
 from flask import Flask, request, render_template, g
+
+# load dependencies
+load_dotenv()
 
 application= app =Flask(__name__)
 
-#adding logs
+# adding logs
 app.logger.addHandler(logging.StreamHandler())
-logging.basicConfig(filename='app.log', level=logging.DEBUG,
+logging.basicConfig(filename='app.log', level=logging.DEBUG, encoding= 'utf-8',
                     format='%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
 
 
@@ -15,7 +20,7 @@ host="database-thesaurus.crnbbf6rv4rc.ap-southeast-1.rds.amazonaws.com",
 port=5432,
 database="postgres",
 user="postgres",
-password="Neji1103!!"
+password=os.getenv('POSTGRES_PASSWORD')
 )
 
 # get synonyms in db
