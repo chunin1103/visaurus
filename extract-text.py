@@ -8,29 +8,29 @@ f = open('all30k.csv', 'w', encoding="utf-8", newline='')
 writer = csv.writer(f)
 
 # open Vietnamese text file
-with open('30k.txt', encoding='utf8') as f:
+# with open('30k.txt', encoding='utf8') as f:
+with open('adding_words.csv', encoding='utf-8') as f:
     lines = f.readlines()
-
 
 # Extract each line with @ to get word into word list
 word_list = []
 # n = 82568 Vietnamese words in this dictionary
 for line in lines:
-    if "@" in line:
-        # Get all Vietnamese words in the dict
-        line = line.strip()
-        line = line.replace("@", "")
-        line = [line]
-        # Translate to English
-        line_eng = GGtrans(line[0])
-        line.append(line_eng)
-        # Checking if a word is Capitalized or not
-        if any(letter.isupper() for letter in line[0]):
-            line.append("isSuper")
-        
+    # if "@" in line:
+    # Get all Vietnamese words in the dict
+    line = line.strip()
+    line = line.replace("@", "")
+    line = [line]
+    # Translate to English
+    line_eng = GGtrans(line[0])
+    line.append(line_eng)
+    # Checking if a word is Capitalized or not
+    if any(letter.isupper() for letter in line[0]):
+        line.append("isSuper")
     
-    # print(line, end = "")
-        word_list.append(line)
+
+# print(line, end = "")
+    word_list.append(line)
 
 
         
