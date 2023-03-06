@@ -10,10 +10,10 @@ writer = csv.writer(f)
 
 
 eng_word_list =[]
-with open('all30k-Vitoen.csv', encoding='utf_8') as csvfile:
+with open('all30k.csv', encoding='utf_8') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
-        eng_word_list.append(row['a'])
+        eng_word_list.append(row['tu_tieng_Anh'])
 
 eng_sym_list =[]
 
