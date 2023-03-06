@@ -1,6 +1,5 @@
 .flaskenv
 02_environment.config
 migrate_db.py
-*.csv
 *.xlsx
 *.zip
