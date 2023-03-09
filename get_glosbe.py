@@ -1,6 +1,6 @@
 import csv
-from encodings import utf_8
 from crawl_glosbe_sym import *
+import time
 
 # open the file in the write mode
 f = open('symnonyms_glosbe.csv', 'w', encoding="utf-8", newline='')
@@ -20,7 +20,7 @@ n=0
 m=0
 for eng_word in eng_word_list:
     n+=1
-    if n<12:
+    if n<15000:
         eng_word = eng_word.replace("a ", "")
         eng_word = eng_word.replace("A ", "")
         eng_word = eng_word.replace("the ", "")
@@ -40,5 +40,6 @@ for eng_word in eng_word_list:
         eng_word.append(symnonym_word)
         eng_sym_list.append(eng_word)
         writer.writerow(eng_word)
+        time.sleep(60/100)
 
 f.close()
