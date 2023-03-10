@@ -40,6 +40,6 @@ for eng_word in eng_word_list:
         eng_word.append(symnonym_word)
         eng_sym_list.append(eng_word)
         writer.writerow(eng_word)
-        time.sleep(60/100)
+        time.sleep(60/120)
 
 f.close()
