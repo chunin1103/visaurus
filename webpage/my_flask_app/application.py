@@ -1,4 +1,4 @@
-import psycopg2
+import sqlite3
 import logging
 import os
 from dotenv import load_dotenv
@@ -15,19 +15,13 @@ logging.basicConfig(filename='app.log', level=logging.DEBUG, encoding= 'utf-8',
                     format='%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
 
 
-conn = psycopg2.connect(
-host="database-thesaurus.crnbbf6rv4rc.ap-southeast-1.rds.amazonaws.com",
-port=5432,
-database="postgres",
-user="postgres",
-password=os.getenv('POSTGRES_PASSWORD')
-)
-
 # get synonyms in db
 def get_synonyms(word):
+    conn = sqlite3.connect("synonyms.db")
     cur = conn.cursor()
-    cur.execute("SELECT synonyms FROM synonyms WHERE word=%s", (word,))
+    cur.execute("SELECT synonyms FROM symnonyms WHERE word=?", (word,))
     result = cur.fetchone()
+    conn.close()
     return result[0] if result else "Word not found."
 
 # index page

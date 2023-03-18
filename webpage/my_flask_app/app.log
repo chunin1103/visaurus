@@ -1,0 +1,25 @@
+2023-03-18 21:05:26,911 INFO werkzeug MainThread :  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2023-03-18 21:05:37,995 INFO werkzeug Thread-2 : 127.0.0.1 - - [18/Mar/2023 21:05:37] "[37mGET / HTTP/1.1[0m" 200 -
+2023-03-18 21:05:38,650 INFO werkzeug Thread-1 : 127.0.0.1 - - [18/Mar/2023 21:05:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-03-18 21:06:11,787 INFO root Thread-3 : Search request: word='a dua', synonyms='xu nịnh,vuốt ve,phẳng hơn,từ ngữ, lấy lòng,quyến rũ,nịnh hót,nhạt nhẽo,xoa dịu,dỗ dành,thúc giục,dụ dỗ,xin phép,pleuile, tán tỉnh, phỉnh, bợ đỡ'
+2023-03-18 21:06:11,799 INFO werkzeug Thread-3 : 127.0.0.1 - - [18/Mar/2023 21:06:11] "[37mPOST /search HTTP/1.1[0m" 200 -
+2023-03-18 21:06:22,899 INFO root Thread-5 : Search request: word='rủi ro', synonyms='chớp lấy cơ hội, thí, sự mạo hiểm, sự nguy hiểm, sự rủi ro,rủi ro,may mắn, mạo,phơi nhiễm,không chắc chắn,nguy hiểm,trách nhiệm pháp lý,nguy cơ,đặt trên, rủi ro,đánh bạc,cơ hội, nguy cơ,phiêu lưu,tình huống, sự liều,khả năng xảy ra,nằm trên đường thẳng,liều,triển vọng,tờ rơi,tai nạn'
+2023-03-18 21:06:22,899 INFO werkzeug Thread-5 : 127.0.0.1 - - [18/Mar/2023 21:06:22] "[37mPOST /search HTTP/1.1[0m" 200 -
+2023-03-18 21:06:32,010 INFO root Thread-7 : Search request: word='lăn lóc', synonyms=',bất biến,lăn,vang vọng, trôi qua,cuồn cuộn,xoay tròn,mềm mại,phức tạp, sự tròng trành,vòng tròn, trập trùng,di chuyển,đồi núi,reo vang,vang lên, Chuyển động lăn, dâng lên cuồn cuộn, sự lăn, tiếng vang rền,nhào lộn,vang dội,ẩn nấp,nhấp nhô,bay bổng, sự cán'
+2023-03-18 21:06:32,010 INFO werkzeug Thread-7 : 127.0.0.1 - - [18/Mar/2023 21:06:32] "[37mPOST /search HTTP/1.1[0m" 200 -
+2023-03-18 21:06:58,662 INFO root Thread-9 : Search request: word='tiếng chuông', synonyms=','call-out,'dialer','pass-bell''
+2023-03-18 21:06:58,663 INFO werkzeug Thread-9 : 127.0.0.1 - - [18/Mar/2023 21:06:58] "[37mPOST /search HTTP/1.1[0m" 200 -
+2023-03-18 21:07:05,497 INFO root Thread-11 : Search request: word='thành thật', synonyms='trung thực',','chân thành','công bằng','thẳng thắn','đáng tin cậy','chân thật','chính hãng','có lương tâm','danh dự','hết sức','khiêm tốn','không thiên vị','không xảo trá','thích hợp','thật','tử tế','vô tội','đáng kính',lương thiện',trung thực',xác thực''
+2023-03-18 21:07:05,498 INFO werkzeug Thread-11 : 127.0.0.1 - - [18/Mar/2023 21:07:05] "[37mPOST /search HTTP/1.1[0m" 200 -
+2023-03-18 21:07:22,895 INFO root Thread-13 : Search request: word='liên thông', synonyms='kết nối','liên kết','hiệp hội','trung gian',','bạn bè','mạng lưới','mối quan hệ','người quen','người thân','ngắt kết nối','nối','sự nối','tham gia','đại lý','đầu nối','đồng minh',kết nối',liên hệ',mối quan hệ''
+2023-03-18 21:07:22,895 INFO werkzeug Thread-13 : 127.0.0.1 - - [18/Mar/2023 21:07:22] "[37mPOST /search HTTP/1.1[0m" 200 -
+2023-03-18 21:10:31,405 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000
+2023-03-18 21:10:31,405 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-03-18 21:10:39,093 INFO werkzeug Thread-1 : 127.0.0.1 - - [18/Mar/2023 21:10:39] "GET / HTTP/1.1" 200 -
+2023-03-18 21:10:45,218 INFO root Thread-2 : Search request: word='a dua', synonyms='xu nịnh,vuốt ve,phẳng hơn,từ ngữ, lấy lòng,quyến rũ,nịnh hót,nhạt nhẽo,xoa dịu,dỗ dành,thúc giục,dụ dỗ,xin phép,pleuile, tán tỉnh, phỉnh, bợ đỡ'
+2023-03-18 21:10:45,225 INFO werkzeug Thread-2 : 127.0.0.1 - - [18/Mar/2023 21:10:45] "POST /search HTTP/1.1" 200 -
+2023-03-18 21:10:49,625 INFO root Thread-3 : Search request: word='du di', synonyms='Word not found.'
+2023-03-18 21:10:49,626 INFO werkzeug Thread-3 : 127.0.0.1 - - [18/Mar/2023 21:10:49] "POST /search HTTP/1.1" 200 -
+2023-03-18 21:10:53,031 INFO root Thread-5 : Search request: word='lang băm', synonyms=',sai sự thật,vịt con,giả vờ,kiêu căng,không trung thực,ăn bám,phổ biến,giả tạo,mô phỏng,lừa đảo,giả mạo,vô kỷ luật,không đủ tiêu chuẩn,scam,cannot found,lang băm'
+2023-03-18 21:10:53,032 INFO werkzeug Thread-5 : 127.0.0.1 - - [18/Mar/2023 21:10:53] "POST /search HTTP/1.1" 200 -
