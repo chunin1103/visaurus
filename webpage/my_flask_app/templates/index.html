@@ -75,7 +75,7 @@
                     font-size: 12px;
                 }
                 h1 {
-                    font-size: 2 rem;
+                    font-size: 1.5 rem;
                 }
             }
 
@@ -83,12 +83,10 @@
         </style>
     </head>
     <body>
-        <h1>Word Synonyms Search</h1>
-        <a href="{{ url_for('search') }}">Search for a word</a>
-
+        <h1>Từ điển từ đồng nghĩa Việt Nam đầu tiên</h1>
         <form action="{{ url_for('search') }}" method="post">
-            <input type="text" name="word">
-            <input type="submit" value="Search">
+            <input type="text" name="word" placeholder="Nhập 1 từ ở đây...">
+            <input type="submit" value="Tìm kiếm">
         </form>
     </body>
 </html>

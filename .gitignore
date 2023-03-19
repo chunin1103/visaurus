@@ -3,3 +3,4 @@
 migrate_db.py
 *.xlsx
 *.zip
+*.db

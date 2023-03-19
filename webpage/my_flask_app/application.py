@@ -11,7 +11,7 @@ application= app =Flask(__name__)
 
 # adding logs
 app.logger.addHandler(logging.StreamHandler())
-logging.basicConfig(filename='app.log', level=logging.DEBUG, encoding= 'utf-8',
+logging.basicConfig(filename='app.log', level=logging.DEBUG,
                     format='%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
 
 

@@ -6,17 +6,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
 
-    <title>Word Synonyms Search</title>
+    <title>Từ điển từ đồng nghĩa Việt Nam đầu tiên</title>
     <style>
-      /* Add your CSS styles here */
-      /* Example styles */
       body {
         text-align: center;
         align-items: center;
         height: 100vh;
       }
       form {
-        width: 500px;
+        width: 40%;
         margin: 20px auto;
         text-align: center;
       }
@@ -54,21 +52,23 @@
   <body>
     <!-- Search form -->
     <form action="/search" method="post">
-      <h3>Word Synonyms Search</h3>
-      <input type="text" name="word" placeholder="Enter a word">
-      <input type="submit" value="Search">
+      <h3>Từ điển từ đồng nghĩa Việt Nam đầu tiên</h3>
+      <input type="text" name="word" placeholder="Nhập 1 từ ở đây...">
+      <input type="submit" value="Tìm kiếm">
     </form>
     <!-- Display search results -->
     {% if word and synonyms %}
-      <p>Synnonyms for: "{{ word }}"</p>
+      <p>Từ đồng nghĩa với "{{ word }}"</p>
       <table class="table table-bordered">
         <tr>
           {% set synonyms_list = synonyms.split(',') %}
-          {% for synonym in synonyms_list %}
-            {% if loop.index is divisibleby 4 %}
-              </tr><tr>
-            {% endif %}
-            <td>{{ synonym }}</td>
+          {% set count = synonyms_list|length %}
+          {% for i in range(0, count, 4) %}
+            <tr>
+              {% for synonym in synonyms_list[i:i+4] %}
+                <td>{{ synonym }}</td>
+              {% endfor %}
+            </tr>
           {% endfor %}
         </tr>
       </table>
