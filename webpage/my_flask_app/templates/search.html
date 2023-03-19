@@ -1,77 +1,37 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+{% extends "base.html" %}
 
+{% block head %}
+    {{ super() }}
+    {% set title = "Từ đồng nghĩa với " + word %}
+    {% set description = "Tìm từ đồng nghĩa với " + word + " trong từ điển từ đồng nghĩa tiếng Việt." %}
+{% endblock %}
 
-    <title>Từ điển từ đồng nghĩa Việt Nam đầu tiên</title>
-    <style>
-      body {
-        text-align: center;
-        align-items: center;
-        height: 100vh;
-      }
-      form {
-        width: 40%;
-        margin: 20px auto;
-        text-align: center;
-      }
-      input[type="text"] {
-        width: 70%;
-        padding: 10px;
-        font-size: 20px;
-        margin-bottom: 20px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-      }
-      input[type="submit"] {
-        width: 20%;
-        padding: 10px;
-        font-size: 20px;
-        margin-bottom: 20px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        background-color: #4CAF50;
-        color: white;
-        cursor: pointer;
-      }
-      h3 {
-        margin-bottom: 20px;
-      }
-      p {
-        margin-bottom: 20px;
-      }
-      
-      table {
-        align-items: center;
-      }
-    </style>
-  </head>
-  <body>
+{% block content %}
+  <div class="search-page">
     <!-- Search form -->
-    <form action="/search" method="post">
-      <h3>Từ điển từ đồng nghĩa Việt Nam đầu tiên</h3>
-      <input type="text" name="word" placeholder="Nhập 1 từ ở đây...">
-      <input type="submit" value="Tìm kiếm">
+    <form class="form-search" action="/search" method="post">
+        <h3>Từ điển từ đồng nghĩa tiếng Việt</h3>
+        <input type="text" name="word" placeholder="Nhập 1 từ ở đây...">
+        <input type="submit" value="Tìm kiếm">
     </form>
     <!-- Display search results -->
-    {% if word and synonyms %}
-      <p>Từ đồng nghĩa với "{{ word }}"</p>
-      <table class="table table-bordered">
-        <tr>
-          {% set synonyms_list = synonyms.split(',') %}
-          {% set count = synonyms_list|length %}
-          {% for i in range(0, count, 4) %}
-            <tr>
-              {% for synonym in synonyms_list[i:i+4] %}
-                <td>{{ synonym }}</td>
-              {% endfor %}
-            </tr>
-          {% endfor %}
-        </tr>
-      </table>
-    {% endif %}
-  </body>
-</html>
+    <div class="results-container">
+      {% if word and synonyms %}
+          <p>Từ đồng nghĩa với "{{ word }}"</p>
+          <table class="table table-bordered">
+              <tr>
+                  {% set synonyms_list = synonyms.split(',') %}
+                  {% set count = synonyms_list|length %}
+                  {% for i in range(0, count, 4) %}
+                      <tr>
+                          {% for synonym in synonyms_list[i:i+4] %}
+                              <td>{{ synonym }}</td>
+                          {% endfor %}
+                      </tr>
+                  {% endfor %}
+              </tr>
+          </table>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

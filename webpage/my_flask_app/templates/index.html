@@ -1,92 +1,13 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <style>
+{% extends "base.html" %}
 
-            body {
-            flex-direction: column;
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            align-items: center;
-            height: 100vh;
-            }
+{% block head %}
+    {{ super() }}
+{% endblock %}
 
-            form {
-            width: 500px;
-            margin: 20px auto;
-            text-align: center;
-            }
-
-            input[type="text"] {
-            width: 70%;
-            padding: 10px;
-            font-size: 20px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            }
-
-            input[type="submit"] {
-            width: 20%;
-            padding: 10px;
-            font-size: 20px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #4CAF50;
-            color: white;
-            cursor: pointer;
-            }
-
-            h3 {
-            margin-bottom: 20px;
-            }
-            p {
-            margin-bottom: 20px;
-            }
-            /* Media Queries */
-
-            @media (max-width: 991px) {
-                form {
-                    width: 80%;
-                    }
-                table {
-                    font-size: 14px;
-                    }
-                h1 {
-                    font-size: 3rem;
-            }
-                }
-            @media (max-width: 767px) {
-                form {
-                    width: 90%;
-                    flex-direction: column;
-                }
-                input[type="submit"] {
-                    margin-top: 0px;
-                    width: 30%;
-                }
-     
-                table {
-                    font-size: 12px;
-                }
-                h1 {
-                    font-size: 1.5 rem;
-                }
-            }
-
-
-        </style>
-    </head>
-    <body>
-        <h1>Từ điển từ đồng nghĩa Việt Nam đầu tiên</h1>
-        <form action="{{ url_for('search') }}" method="post">
-            <input type="text" name="word" placeholder="Nhập 1 từ ở đây...">
-            <input type="submit" value="Tìm kiếm">
-        </form>
-    </body>
-</html>
+{% block content %}
+    <h1>Từ điển từ đồng nghĩa tiếng Việt</h1>
+    <form class="form-index" action="{{ url_for('search') }}" method="post">
+        <input type="text" name="word" placeholder="Nhập 1 từ ở đây...">
+        <input type="submit" value="Tìm kiếm">
+    </form>
+{% endblock %}
