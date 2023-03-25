@@ -2,8 +2,7 @@ import sqlite3
 import logging
 import os
 from dotenv import load_dotenv
-from flask import Flask, request, render_template, g
-
+from flask import Flask, request, render_template, g, send_from_directory, request
 # load dependencies
 load_dotenv()
 
@@ -28,6 +27,11 @@ def get_synonyms(word):
 @application.route('/')
 def index():
     return render_template('index.html')
+
+# sitemap
+@application.route('/sitemap.xml')
+def sitemap():
+    return send_from_directory(app.static_folder, request.path[1:])
 
 # search page
 @application.route("/search", methods=["GET", "POST"])
