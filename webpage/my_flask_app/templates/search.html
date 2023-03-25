@@ -2,22 +2,22 @@
 
 {% block head %}
     {{ super() }}
-    {% set title = "Từ đồng nghĩa với " + word %}
-    {% set description = "Tìm từ đồng nghĩa với " + word + " trong từ điển từ đồng nghĩa tiếng Việt." %}
+    {% set title = "Từ đồng nghĩa với " + word + "| Visaurus" %}
+    {% set description = "Tìm từ đồng nghĩa với " + word + " trong từ điển Visaurus." %}
 {% endblock %}
 
 {% block content %}
   <div class="search-page">
     <!-- Search form -->
     <form class="form-search" action="/search" method="post">
-        <h3>Từ điển từ đồng nghĩa tiếng Việt</h3>
+        <h1>Từ điển từ đồng nghĩa tiếng Việt</h1>
         <input type="text" name="word" placeholder="Nhập 1 từ ở đây...">
         <input type="submit" value="Tìm kiếm">
     </form>
     <!-- Display search results -->
     <div class="results-container">
       {% if word and synonyms %}
-          <p>Từ đồng nghĩa với "{{ word }}"</p>
+          <h3>Từ đồng nghĩa với <span>"{{ word }}"</span></h3>
           <table class="table table-bordered">
               <tr>
                   {% set synonyms_list = synonyms.split(',') %}

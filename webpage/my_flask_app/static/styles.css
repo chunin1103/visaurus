@@ -51,10 +51,22 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-h3 {
+h1 {
     margin-bottom: 20px;
 }
-p {
+
+h3 {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+span {
+    font-weight: bold;
+    color: orange;
+}
+
+.result-heading {
     margin-bottom: 20px;
 }
 
@@ -75,6 +87,10 @@ table {
     h1 {
         font-size: 3rem;
     }
+    h3 {
+        font-size: 2rem;
+    }
+    
 }
 @media (max-width: 767px) {
     form {
