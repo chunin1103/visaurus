@@ -1,21 +1,4 @@
-2023-03-25 23:35:43,271 INFO werkzeug MainThread :  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
-2023-03-25 23:35:47,216 INFO werkzeug Thread-1 : 127.0.0.1 - - [25/Mar/2023 23:35:47] "[37mGET / HTTP/1.1[0m" 200 -
-2023-03-25 23:35:47,695 INFO werkzeug Thread-2 : 127.0.0.1 - - [25/Mar/2023 23:35:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2023-03-25 23:35:56,085 INFO root Thread-3 : Search request: word='c\u1ed1 ch\u1ea5p', synonyms=',khó ch\u1eefa, \u01b0\u01a1ng ng\u1ea1nh,ch\u1ecbu l\u1eeda,c\u1ee9ng \u0111\u1ea7u,c\u1ed1 ch\u1ea5p, ngoan c\u1ed1,c\u1ee9ng r\u1eafn,c\u1ea3nh quan,ngoan c\u1ed1, b\u01b0\u1edbng,\u0111\u1ea7u bò,kiên trì,c\u1ee9ng nh\u1eafc,không linh ho\u1ea1t,ý chí m\u1ea1nh m\u1ebd, \u0111\u1ea7u bò,\u0111a tính, c\u1ed1 ch\u1ea5p,b\u01b0\u1edbng b\u1ec9nh,không ng\u1eebng, không lay chuy\u1ec3n \u0111\u01b0\u1ee3c, \u01b0\u01a1ng b\u01b0\u1edbng, c\u1ee9ng \u0111\u1ea7u,kiên \u0111\u1ecbnh, ngoan c\u01b0\u1eddng, r\u1eafn m\u1eb7t,ngoan c\u01b0\u1eddng, không gò theo \u0111\u01b0\u1ee3c,m\u1ea1nh m\u1ebd,duy ý chí,c\u01b0\u01a1ng quy\u1ebft'
-2023-03-25 23:35:56,106 INFO werkzeug Thread-3 : 127.0.0.1 - - [25/Mar/2023 23:35:56] "[37mPOST /search HTTP/1.1[0m" 200 -
-2023-03-25 23:36:05,575 INFO werkzeug Thread-5 : 127.0.0.1 - - [25/Mar/2023 23:36:05] "[33mGET /sitemap.xml HTTP/1.1[0m" 404 -
-2023-03-25 23:36:14,130 INFO werkzeug Thread-7 : 127.0.0.1 - - [25/Mar/2023 23:36:14] "[33mGET /sitemap HTTP/1.1[0m" 404 -
-2023-03-25 23:36:18,898 INFO werkzeug Thread-9 : 127.0.0.1 - - [25/Mar/2023 23:36:18] "[33mGET /sitemap.xml HTTP/1.1[0m" 404 -
-2023-03-25 23:45:32,161 INFO werkzeug Thread-12 : 127.0.0.1 - - [25/Mar/2023 23:45:32] "[37mGET / HTTP/1.1[0m" 200 -
-2023-03-25 23:45:36,265 INFO werkzeug Thread-11 : 127.0.0.1 - - [25/Mar/2023 23:45:36] "[37mGET / HTTP/1.1[0m" 200 -
-2023-03-25 23:45:42,226 INFO werkzeug Thread-14 : 127.0.0.1 - - [25/Mar/2023 23:45:42] "[33mGET /sitemap.xml HTTP/1.1[0m" 404 -
-2023-03-25 23:49:11,882 INFO werkzeug Thread-16 : 127.0.0.1 - - [25/Mar/2023 23:49:11] "[33mGET /sitemap.xml HTTP/1.1[0m" 404 -
-2023-03-25 23:49:19,202 INFO werkzeug Thread-18 : 127.0.0.1 - - [25/Mar/2023 23:49:19] "[33mGET /sitemap HTTP/1.1[0m" 404 -
-2023-03-25 23:49:26,612 INFO werkzeug Thread-19 : 127.0.0.1 - - [25/Mar/2023 23:49:26] "[33mGET /sitemap.xml HTTP/1.1[0m" 404 -
-2023-03-25 23:49:27,567 INFO werkzeug Thread-20 : 127.0.0.1 - - [25/Mar/2023 23:49:27] "[33mGET /sitemap.xml/ HTTP/1.1[0m" 404 -
-2023-03-25 23:49:30,064 INFO werkzeug Thread-21 : 127.0.0.1 - - [25/Mar/2023 23:49:30] "[33mGET /sitemap.xml/ HTTP/1.1[0m" 404 -
-2023-03-25 23:49:30,284 INFO werkzeug Thread-22 : 127.0.0.1 - - [25/Mar/2023 23:49:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2023-03-25 23:51:04,449 INFO werkzeug Thread-23 : 127.0.0.1 - - [25/Mar/2023 23:51:04] "[33mGET /sitemap.xml/ HTTP/1.1[0m" 404 -
-2023-03-25 23:51:37,461 INFO werkzeug Thread-26 : 127.0.0.1 - - [25/Mar/2023 23:51:37] "[33mGET /sitemap.xml HTTP/1.1[0m" 404 -
-2023-03-25 23:53:36,525 INFO werkzeug MainThread :  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
-2023-03-25 23:53:39,103 INFO werkzeug Thread-1 : 127.0.0.1 - - [25/Mar/2023 23:53:39] "[37mGET /sitemap.xml HTTP/1.1[0m" 200 -
+2023-03-26 11:21:12,456 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000
+2023-03-26 11:21:12,457 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-03-26 11:21:16,632 INFO werkzeug Thread-1 : 127.0.0.1 - - [26/Mar/2023 11:21:16] "[36mGET /robots.txt HTTP/1.1[0m" 304 -

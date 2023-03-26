@@ -74,6 +74,10 @@ table {
     align-items: center;
 }
 
+td {
+    font-size: 1.3rem
+}
+
 /* Media Queries */
 
 @media (max-width: 991px) {
@@ -84,10 +88,10 @@ table {
         font-size: 14px;
     }
     h1 {
-        font-size: 3rem;
+        font-size: 2.2rem;
     }
     h3 {
-        font-size: 2rem;
+        font-size: 1.3rem;
     }
     
 }
@@ -105,6 +109,9 @@ table {
     }
     h1 {
         font-size: 1.5 rem;
+    }
+    h3 {
+        font-size: 1.2 rem;
     }
 }
 

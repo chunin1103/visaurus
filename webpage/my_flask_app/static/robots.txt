@@ -1,0 +1,9 @@
+User-agent: deepcrawl
+Disallow: /
+
+User-agent: seerbot/1.0
+Disallow: /
+
+User-agent: *
+Allow: /
+Sitemap: http://tudiendongnghia.com/sitemap.xml

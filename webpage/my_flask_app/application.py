@@ -33,6 +33,11 @@ def index():
 def sitemap():
     return send_from_directory(app.static_folder, request.path[1:])
 
+# Add a route for robots.txt
+@application.route('/robots.txt')
+def serve_robots_txt():
+    return send_from_directory(app.static_folder, request.path[1:])
+
 # search page
 @application.route("/search", methods=["GET", "POST"])
 def search():
@@ -51,6 +56,11 @@ def close_connection(exception):
     conn = getattr(g, '_database', None)
     if conn is not None:
         conn.close()
+
+@app.after_request
+def apply_cache_control(response):
+    response.headers["Cache-Control"] = "public, max-age=86400"
+    return response
 
 # auto reload while debugging
 app.config['TEMPLATES_AUTO_RELOAD'] = True
