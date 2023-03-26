@@ -87,6 +87,9 @@ td {
     table {
         font-size: 14px;
     }
+    .form-index {
+        width: 90%;
+    }
     h1 {
         font-size: 2.2rem;
     }

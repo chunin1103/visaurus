@@ -2,3 +2,22 @@
  * Running on http://127.0.0.1:8000
 2023-03-26 11:21:12,457 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
 2023-03-26 11:21:16,632 INFO werkzeug Thread-1 : 127.0.0.1 - - [26/Mar/2023 11:21:16] "[36mGET /robots.txt HTTP/1.1[0m" 304 -
+2023-03-26 20:24:47,467 INFO werkzeug MainThread :  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2023-03-26 20:25:02,227 INFO werkzeug Thread-2 : 127.0.0.1 - - [26/Mar/2023 20:25:02] "[37mGET /robots.txt HTTP/1.1[0m" 200 -
+2023-03-26 20:25:02,339 INFO werkzeug Thread-1 : 127.0.0.1 - - [26/Mar/2023 20:25:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-03-26 20:25:06,463 INFO root Thread-3 : Search request: word='tai h\u1ea1i', synonyms=' kh\u1ed1c h\u1ea1i,th\u1ea3m kh\u1ed1c,tr\u01b0\u1eddng h\u1ee3p x\u1ea5u nh\u1ea5t,th\u1ea3m h\u1ecda,\u0111en \u0111\u1ee7i,x\u1ea5u s\u1ed1,b\u1ea5t l\u1ee3i,không may,\u0111\u1ecbnh m\u1ec7nh,có h\u1ea1i,ác ý,kh\u1ee7ng khi\u1ebfp, b\u1ea5t h\u1ea1nh, tai h\u1ecda,\u0111\u1ea1i h\u1ed3ng th\u1ee7y,h\u1ee7y di\u1ec7t,tai h\u1ea1i, th\u1ea3m kh\u1ed1c,tàn phá,ch\u1ebft ng\u01b0\u1eddi,gây h\u1ea1i,tai h\u1ecda'
+2023-03-26 20:25:06,498 INFO werkzeug Thread-3 : 127.0.0.1 - - [26/Mar/2023 20:25:06] "[37mPOST /search HTTP/1.1[0m" 200 -
+2023-03-26 20:26:28,617 INFO root Thread-7 : Search request: word='tai h\u1ea1i', synonyms=' kh\u1ed1c h\u1ea1i,th\u1ea3m kh\u1ed1c,tr\u01b0\u1eddng h\u1ee3p x\u1ea5u nh\u1ea5t,th\u1ea3m h\u1ecda,\u0111en \u0111\u1ee7i,x\u1ea5u s\u1ed1,b\u1ea5t l\u1ee3i,không may,\u0111\u1ecbnh m\u1ec7nh,có h\u1ea1i,ác ý,kh\u1ee7ng khi\u1ebfp, b\u1ea5t h\u1ea1nh, tai h\u1ecda,\u0111\u1ea1i h\u1ed3ng th\u1ee7y,h\u1ee7y di\u1ec7t,tai h\u1ea1i, th\u1ea3m kh\u1ed1c,tàn phá,ch\u1ebft ng\u01b0\u1eddi,gây h\u1ea1i,tai h\u1ecda'
+2023-03-26 20:26:28,618 INFO werkzeug Thread-7 : 127.0.0.1 - - [26/Mar/2023 20:26:28] "[37mPOST /search HTTP/1.1[0m" 200 -
+2023-03-26 20:29:59,386 INFO werkzeug Thread-11 : 127.0.0.1 - - [26/Mar/2023 20:29:59] "[37mGET / HTTP/1.1[0m" 200 -
+2023-03-26 20:29:59,745 INFO werkzeug Thread-12 : 127.0.0.1 - - [26/Mar/2023 20:29:59] "[37mGET /static/styles.css HTTP/1.1[0m" 200 -
+2023-03-26 20:30:00,089 INFO werkzeug Thread-13 : 127.0.0.1 - - [26/Mar/2023 20:30:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-03-27 00:22:35,428 INFO werkzeug Thread-14 : 127.0.0.1 - - [27/Mar/2023 00:22:35] "[37mGET / HTTP/1.1[0m" 200 -
+2023-03-27 00:22:35,832 INFO werkzeug Thread-15 : 127.0.0.1 - - [27/Mar/2023 00:22:35] "[37mGET /static/styles.css HTTP/1.1[0m" 200 -
+2023-03-27 00:22:36,045 INFO werkzeug Thread-16 : 127.0.0.1 - - [27/Mar/2023 00:22:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-03-27 00:22:46,157 INFO werkzeug Thread-17 : 127.0.0.1 - - [27/Mar/2023 00:22:46] "[37mGET / HTTP/1.1[0m" 200 -
+2023-03-27 00:22:46,471 INFO werkzeug Thread-18 : 127.0.0.1 - - [27/Mar/2023 00:22:46] "[37mGET /static/styles.css HTTP/1.1[0m" 200 -
+2023-03-27 00:22:46,617 INFO werkzeug Thread-19 : 127.0.0.1 - - [27/Mar/2023 00:22:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-03-27 00:22:54,540 INFO werkzeug Thread-20 : 127.0.0.1 - - [27/Mar/2023 00:22:54] "[37mGET / HTTP/1.1[0m" 200 -
+2023-03-27 00:22:54,892 INFO werkzeug Thread-21 : 127.0.0.1 - - [27/Mar/2023 00:22:54] "[37mGET /static/styles.css HTTP/1.1[0m" 200 -
+2023-03-27 00:22:55,122 INFO werkzeug Thread-22 : 127.0.0.1 - - [27/Mar/2023 00:22:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
