@@ -8,8 +8,20 @@
 
 {% block content %}
     <h1>Từ điển từ đồng nghĩa tiếng Việt</h1>
-    <form class="form-index" action="{{ url_for('search') }}" method="post">
-        <input type="text" name="word" placeholder="Nhập 1 từ ở đây...">
+    <form class="form-index" id="search-form" action="{{ url_for('search') }}" method="get">
+        <input type="text" id="search-input" name="word" placeholder="Nhập 1 từ ở đây...">
         <input type="submit" value="Tìm kiếm">
     </form>
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        document.getElementById("search-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const searchInput = document.getElementById("search-input");
+            const word = searchInput.value.trim().toLowerCase();
+            const wordSlug = word.replace(" ", "-");
+            window.location.href = "{{ url_for('search_results', slug='') }}" + wordSlug;
+        });
+    </script>
 {% endblock %}

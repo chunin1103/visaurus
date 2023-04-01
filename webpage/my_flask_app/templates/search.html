@@ -6,10 +6,22 @@
     {% set description = "Tìm từ đồng nghĩa với " + word + " trong từ điển Visaurus." %}
 {% endblock %}
 
+{% block scripts %}
+    <script>
+        document.getElementById("search-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const searchInput = event.target.elements.word;
+            const word = searchInput.value.trim().toLowerCase();
+            const wordSlug = word.replace(" ", "-");
+            window.location.href = "{{ url_for('search_results', slug='') }}" + wordSlug;
+        });
+    </script>
+{% endblock %}
+
 {% block content %}
   <div class="search-page">
     <!-- Search form -->
-    <form class="form-search" action="/search" method="post">
+    <form class="form-search" id="search-form" method="get">
         <h1>Từ điển từ đồng nghĩa tiếng Việt</h1>
         <input type="text" name="word" placeholder="Nhập 1 từ ở đây...">
         <input type="submit" value="Tìm kiếm">
