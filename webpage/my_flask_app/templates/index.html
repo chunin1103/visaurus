@@ -8,7 +8,7 @@
 
 {% block content %}
     <h1>Từ điển từ đồng nghĩa tiếng Việt</h1>
-    <form class="form-index" id="search-form" action="{{ url_for('search') }}" method="get">
+    <form class="form-index" id="search-form" action="#" method="get" onsubmit="submitSearch()">
         <input type="text" id="search-input" name="word" placeholder="Nhập 1 từ ở đây...">
         <input type="submit" value="Tìm kiếm">
     </form>

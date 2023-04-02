@@ -16,11 +16,38 @@
     <meta property="og:url" content="{{ request.url }}" />
     <meta property="og:type" content="website" />
     {% endblock %}
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WF33DNTHTQ"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-WF33DNTHTQ');
+    </script>
 </head>
 <body>
     {% block content %}
     {% endblock %}
     {% block scripts %}
+    <script>
+        function submitSearch() {
+            // Capture the searched word
+            var searchInput = document.getElementById("search-input");
+            var searchedWord = searchInput.value.trim().toLowerCase();
+
+            // Send a custom event to Google Analytics
+            gtag('event', 'search', {
+                'event_category': 'thesaurus',
+                'event_label': searchedWord
+            });
+
+            // Update the form's action attribute to redirect to the search results page
+            var searchForm = document.getElementById("search-form");
+            searchForm.action = "{{ url_for('search_results', slug='') }}" + searchedWord.replace(' ', '-');
+        }
+    </script>
     {% endblock %}
 </body>
 </html>

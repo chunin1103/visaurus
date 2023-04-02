@@ -13,4 +13,12 @@
     <loc>http://tudiendongnghia.com/search</loc>
     <changefreq>weekly</changefreq>
   </url>
+  <url>
+    <loc>http://tudiendongnghia.com/search/xin</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>http://tudiendongnghia.com/search/vui</loc>
+    <changefreq>weekly</changefreq>
+  </url>
 </urlset>
